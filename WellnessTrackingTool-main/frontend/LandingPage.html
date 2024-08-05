@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wellness Tracking</title>
+    <!--Icon CDN-->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <!--Bootstrap css & js CDN links-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!--Custom css link-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="continer-fluide">
+
+        <header>
+            <nav>
+                <div class="logo">
+                    <h2>Health is Wealth</h2>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">About</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Plans</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Blogs</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="login-signup-btn">
+                    <a class="button" data-bs-toggle="modal" href="#exampleModalToggle">Login</a>
+                    <a class="button" data-bs-toggle="modal" href="#exampleModalToggle2">Signup</a>
+                </div>
+                    <!--Login Modal-->
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalToggleLabel">Login</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="./Authentication/login.php" method="post">
+                                        <div>
+                                            <label for="username">Username:</label>
+                                            <input type="text" id="username" name="username" required>
+                                        </div>
+                                        <div>
+                                            <label for="password">Password:</label>
+                                            <input type="password" id="password" name="password" required>
+                                        </div>
+                                        <div>
+                                            <a href="#">Forgot Password?</a>
+                                            <br>
+                                            <button type="submit">Login</button>
+                                        </div>
+                                        <span>Don't have an account? <a href="#" data-bs-target="#exampleModalToggle2"
+                                                data-bs-toggle="modal" data-bs-dismiss="modal">Signup</a></span>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalToggleLabel2">Sign Up</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="./Authentication/save_data.php" method="post">
+                                        <div>
+                                            <label for="full_name">Full Name:</label>
+                                            <input type="text" id="full_name" name="full_name" required>
+                                        </div>
+                                        <div>
+                                            <label for="email">Email:</label>
+                                            <input type="email" id="email" name="email" required>
+                                        </div>
+                                        <div>
+                                            <label for="password">Password:</label>
+                                            <input type="password" id="password" name="password" required>
+                                        </div>
+                                        <div>
+                                            <label for="confirm_password">Confirm Password:</label>
+                                            <input type="password" id="confirm_password" name="confirm_password"
+                                                required>
+                                        </div>
+                                        <div>
+                                            <button type="submit" id="submit_button">Submit</button>
+                                        </div>
+                                        <span>Already have an account? <a href="#" data-bs-target="#exampleModalToggle"
+                                                data-bs-toggle="modal" data-bs-dismiss="modal">Login</a></span>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+            </nav>
+        </header>
+
+        <section>
+            <div class="hero-section">
+                <h1>Wellness Revolution</h1>
+                <p>Achieve your fitness goals with our cutting-edge exercise tracking features.
+                    <br>
+                    Stay motivated and monitor your progress effortlessly.
+                    <br>
+                    Join our community and transform your life today!
+                </p>
+                <a href="#">Get's Start</a>
+            </div>
+        </section>
+
+    </div>
+
+
+
+    <!--Custom js link-->
+    <script src="script.js"></script>
+</body>
+
+</html>
